@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winter 2024</title>
+    <title>Frühling 2024</title>
     <link rel="icon" type="image/jpg" href="logosonn.jpg"> 
     <style>
+        .download {
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 16px;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        
         body {
             background-color: black;
         h2 {
@@ -194,6 +208,45 @@
         // Das neue Bild in das Modal setzen
         modalImg.src = images[currentIndex].src;
     }
+    // Download-Button abrufen
+    const downloadBtn = document.getElementById('downloadBtn');
+    
+    // Funktion zum Aktualisieren des Download-Links
+    function updateDownloadLink() {
+        downloadBtn.onclick = function() {
+            const link = document.createElement('a');
+            link.href = modalImg.src;
+            link.download = 'bild.jpg'; // Standardname für das heruntergeladene Bild
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    }
+    
+    // Event Listener für jedes Bild, um den Download-Link zu setzen
+    images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = image.src;
+            currentIndex = index;
+            updateDownloadLink(); // Download-Link beim Bildwechsel aktualisieren
+        });
+    });
+    
+    // Update des Download-Links, wenn man zwischen Bildern wechselt
+    function changeImage(direction) {
+        currentIndex += direction;
+    
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+    
+        modalImg.src = images[currentIndex].src;
+        updateDownloadLink(); // Download-Link aktualisieren
+    }
+
 </script>
 
 </body>
