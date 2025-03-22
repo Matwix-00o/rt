@@ -3,4 +3,9 @@ body {
     background: black url(backg.jpg) no-repeat fixed center;
     background-size: cover;
     color: red;
+    display: flex;
+    flex-direction: column; /* Ordnet die Kinder (Buttons) vertikal an */
+    align-items: center; /* Zentriert die Buttons horizontal */
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    min-height: 100vh; 
 }
