@@ -1,0 +1,68 @@
+body {
+    text-align: center;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* Ordnet die Kinder (Buttons) vertikal an */
+    align-items: center; /* Zentriert die Buttons horizontal */
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    min-height: 100vh; 
+}
+
+@keyframes sickBack {
+    0% { background-color: red; }
+    25% { background-color: orange; }
+    50% { background-color: lime }
+    75% { background-color: cyan }
+    100% { background-color: magenta;}
+}
+
+
+@keyframes neonglow {
+    0% { box-shadow: 0 0 10px orangered; }
+    50% { box-shadow: 0 0 30px orangered; }
+    100% { box-shadow: 0 0 10px orangered; }
+}
+
+button {
+    margin-top: 20px; /* Abstand zwischen den Buttons */
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 165, 0);
+    border: none;
+    padding: 10px 20px;
+    animation: neonglow 2s infinite alternate;
+    border-radius: 20px;
+}
+
+
+input[type="password"] {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #6c5ce7;
+    border-radius: 5px;
+    background-color: #2c2c3a;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="password"]:focus {
+    border-color: #a29bfe;
+    box-shadow: 0 0 10px #a29bfe;
+}
+
+h2 {
+    color: white;
+    animation: texts 20s infinite linear;
+}
+
+@keyframes texts {
+    0%   { font-family: fantasy; opacity: 1; transform: scale(1); }
+    20%  { font-family: sans-serif; opacity: 0.9; transform: scale(2); }
+    40%  { font-family: monospace; opacity: 1; transform: scale(1); }
+    60%  { font-family: cursive; opacity: 0.9; transform: scale(2); }
+    80%  { font-family: sans-serif; opacity: 1; transform: scale(1); }
+    100% { font-family: fantasy; opacity: 1; transform: scale(2); }
+}
