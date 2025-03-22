@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter 2024</title>
+    <link rel="icon" type="image/jpg" href="logosonn.jpg"> 
+    <style>
+        body {
+            background-color: black;
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        /* Galerie mit 4 Bildern pro Spalte */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        /* Styling der Bilder */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Stil für das vergrößerte Bild */
+        .modal {
+            display: none; /* Anfangs ausgeblendet */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        /* Der Close-Button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Weiter- und Zurück-Buttons */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.0);
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(250, 0, 0, 0.6);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Winter 2024</h2>
+
+<!-- Galerie -->
+<div class="gallery">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.01_49aeda1b.jpg" alt="Bild 1">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.01_3858848c.jpg" alt="Bild 2">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.01_d85da3da.jpg" alt="Bild 3">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.01_dd42885e.jpg" alt="Bild 4">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.01_f6158cc7.jpg" alt="Bild 5">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.00_1de494dc.jpg" alt="Bild 6">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.00_6d515ad7.jpg" alt="Bild 7">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.00_b15a1d61.jpg" alt="Bild 8">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.00_c201bfdc.jpg" alt="Bild 9">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.01_41cca05c.jpg" alt="Bild 10">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.01_e8b6d223.jpg" alt="Bild 11">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.59_54a567f1.jpg" alt="Bild 12">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.59_3564b969.jpg" alt="Bild 13">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.59_c7757e1d.jpg" alt="Bild 14">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.00_3ac65c36.jpg" alt="Bild 15">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.00_a4ea3ecd.jpg" alt="Bild 16">
+    <img src="WhatsApp Bild 2025-03-22 um 18.53.00_a9950145.jpg" alt="Bild 17">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.58_115d9084.jpg" alt="Bild 18">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.58_972d8d29.jpg" alt="Bild 19">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.58_894272ec.jpg" alt="Bild 20">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.59_cb53cbc9.jpg" alt="Bild 21">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.59_d9d762a7.jpg" alt="Bild 22">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.59_eda0c836.jpg" alt="Bild 23">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.57_2fb6f52d.jpg" alt="Bild 24">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.57_8d7fa4eb.jpg" alt="Bild 25">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.57_6528c129.jpg" alt="Bild 26">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.57_37287d86.jpg" alt="Bild 27">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.58_9b31bfe1.jpg" alt="Bild 28">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.58_a89233a6.jpg" alt="Bild 29">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.56_3f6c4b3e.jpg" alt="Bild 30">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.56_318ef7be.jpg" alt="Bild 31">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.56_583e17e5.jpg" alt="Bild 32">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.57_401f2b35.jpg" alt="Bild 33">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.57_defd017a.jpg" alt="Bild 34">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.56_9e792588.jpg" alt="Bild 35">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.54_415c68ab.jpg" alt="Bild 36">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.50_973e6fbc.jpg" alt="Bild 37">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.51_eb04ab16.jpg" alt="Bild 38">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.49_7d962aa2.jpg" alt="Bild 39">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.49_c6e48cce.jpg" alt="Bild 40">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.48_6d946758.jpg" alt="Bild 41">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.48_40f0d4aa.jpg" alt="Bild 42">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.49_581445d4.jpg" alt="Bild 43">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.47_3fa1363d.jpg" alt="Bild 44">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.47_8048b85d.jpg" alt="Bild 45">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.47_648954ee.jpg" alt="Bild 46">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.47_c1678c2d.jpg" alt="Bild 47">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.48_bc8848cc.jpg" alt="Bild 48">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.48_e2049f0e.jpg" alt="Bild 49">
+    <img src="WhatsApp Bild 2025-03-22 um 18.52.47_710aa847.jpg" alt="Bild 50">
+</div>
+
+
+
+<!-- Modal für das vergrößerte Bild -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
+    <img id="modalImg" src="" alt="">
+    <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+<script>
+    // Alle Bilder abrufen
+    const images = document.querySelectorAll('.gallery img');
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close');
+    let currentIndex = 0;
+
+    // Event Listener für jedes Bild
+    images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            modal.style.display = 'flex'; // Modal anzeigen
+            modalImg.src = image.src;    // Das Bild in der großen Ansicht setzen
+            currentIndex = index;        // Der aktuelle Index des Bildes
+        });
+    });
+
+    // Event Listener zum Schließen des Modals
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none'; // Modal schließen
+    });
+
+    // Event Listener, um das Modal zu schließen, wenn man außerhalb des Bildes klickt
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Funktion zum Wechseln der Bilder
+    function changeImage(direction) {
+        currentIndex += direction;
+        
+        // Falls der Index nach vorne oder hinten außerhalb des Bereichs geht, zurück zum Anfang oder Ende
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+
+        // Das neue Bild in das Modal setzen
+        modalImg.src = images[currentIndex].src;
+    }
+</script>
+
+</body>
+</html>
