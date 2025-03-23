@@ -7,11 +7,8 @@
     <link rel="icon" type="image/jpg" href="logosonn.jpg"> 
     <style>
 
-        .download {
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.0);
+        #downloadBtn {
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
             font-size: 16px;
             padding: 8px 16px;
@@ -147,11 +144,14 @@
 
 <!-- Modal für das vergrößerte Bild -->
 <div id="myModal" class="modal">
-    <span class="close">&times;</span>
+    <!-- Container für Close- und Download-Button -->
+    <div class="modal-header">
+        <button class="close">&times;</button>
+        <button id="downloadBtn">⬇️ Download</button>
+    </div>
     <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
     <img id="modalImg" src="" alt="">
     <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
-    <button id="downloadBtn">⬇️ Download</button>
 </div>
 
 
