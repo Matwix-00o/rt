@@ -1,14 +1,12 @@
-function win24() {
-	window.location.href = "win24.html"
+function ladeScript(url) {
+    const script = document.createElement('script'); // Erstelle ein neues <script>-Tag
+    script.src = url;  // Setze die Quelle der JavaScript-Datei
+    script.type = 'text/javascript';  // Setze den Typ des Skripts
+    script.async = true;  // Das Skript wird asynchron geladen
+    document.head.appendChild(script); // Füge das <script>-Tag zum <head>-Tag der Seite hinzu
 }
 
-function früh24() {
-	window.location.href = "früh24.html"
-}
+ladeScript('control.js');  // Lade und führe 'script1.js' aus
 
-function som24() {
-	window.location.href = "som24.html"
-}
-function herb24() {
-	window.location.href = "herb24.html"
-}
+
+
