@@ -5,7 +5,7 @@ function getUrlParameter(name) {
 
         // Überprüfen, ob der Benutzer den geheimen Schlüssel hat
         if (getUrlParameter("key") !== "romtromps!") {
-            window.location.href = "login.html"; // Falls der Schlüssel falsch ist, zurück zur Login-Seite
+            window.location.href = "index.html"; // Falls der Schlüssel falsch ist, zurück zur Login-Seite
         }
 
         // Logout-Funktion: Entfernt den URL-Parameter und leitet zurück zur Login-Seite
