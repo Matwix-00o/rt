@@ -10,7 +10,7 @@ function getUrlParameter(name) {
 
         // Logout-Funktion: Entfernt den URL-Parameter und leitet zurück zur Login-Seite
         function logout() {
-            window.location.href = "login.html"; // Weiterleitung zur Login-Seite
+            window.location.href = "index.html"; // Weiterleitung zur Login-Seite
         }
 
 
