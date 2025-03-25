@@ -7,7 +7,7 @@
     <link rel="icon" type="image/jpg" href="logosonn.jpg"> 
     <style>
 
-        .download {
+        #download {
             position: absolute;
             top: 20px;
             left: 20px;
@@ -149,7 +149,7 @@
     <!-- Container für Close- und Download-Button -->
     <div class="modal-header">
         <button class="close">&times;</button>
-        <button class="download">&darr;</button>
+        <button id="download">&darr;</button>
     </div>
     <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
     <img id="modalImg" src="" alt="">
@@ -202,7 +202,7 @@
     }
 
     // Download-Button abrufen
-    const downloadBtn = document.getElementById('downloadBtn');
+    const downloadBtn = document.getElementById('download');
     
     // Funktion zum Aktualisieren des Download-Links
     function updateDownloadLink() {
