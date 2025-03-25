@@ -7,18 +7,18 @@
     <link rel="icon" type="image/jpg" href="logosonn.jpg"> 
     <style>
 
-        #downloadBtn {
-            background-color: rgba(0, 0, 0, 0.5);
-            margin-top: 5px;
-            margin-left: 5px;
+        .download {
+            position: absolute;
+            top: 20px;
+            left: 20px;
             color: white;
-            font-size: 16px;
-            padding: 8px 16px;
-            border: none;
+            font-size: 20px;
+            text-decoration: none;
             cursor: pointer;
-            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.0);
+            padding: 10px;
+            border: none;
         }
-
         body {
             background-color: black;
         h2 {
@@ -149,7 +149,7 @@
     <!-- Container für Close- und Download-Button -->
     <div class="modal-header">
         <button class="close">&times;</button>
-        <button id="downloadBtn">⬇️</button>
+        <button class="download">&darr;</button>
     </div>
     <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
     <img id="modalImg" src="" alt="">
