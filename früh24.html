@@ -6,7 +6,7 @@
     <title>Frühling 2024</title>
     <link rel="icon" type="image/jpg" href="logosonn.jpg"> 
     <style>
-        .download {
+        #download {
             position: absolute;
             top: 20px;
             left: 20px;
@@ -161,7 +161,7 @@
     <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
     <img id="modalImg" src="" alt="">
     <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
-    <button class="download">&darr;</button>
+    <button id="download">&darr;</button>
 </div>
 
 
@@ -209,7 +209,7 @@
         modalImg.src = images[currentIndex].src;
     }
     // Download-Button abrufen
-    const downloadBtn = document.getElementById('downloadBtn');
+    const downloadBtn = document.getElementById('download');
     
     // Funktion zum Aktualisieren des Download-Links
     function updateDownloadLink() {
