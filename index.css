@@ -9,3 +9,11 @@ body {
     justify-content: center; /* Zentriert den Inhalt vertikal */
     min-height: 100vh; 
 }
+button {
+    margin-top: 20px; /* Abstand zwischen den Buttons */
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 165, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
