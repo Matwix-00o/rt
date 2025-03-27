@@ -10,13 +10,30 @@ body {
     min-height: 100vh; 
 }
 button {
-    margin-top: 20px; /* Abstand zwischen den Buttons */
+    margin-top: 20px;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 165, 0);
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
     animation: slide-in 0.8s ease-out;
+    opacity: 0; /* Verhindert, dass der Button vor der Animation sichtbar ist */
+    animation-fill-mode: forwards; /* Bleibt am Endpunkt der Animation */
+}
+
+/* Erste Button (ohne Verzögerung) */
+button:nth-child(1) {
+    animation-delay: 0s;
+}
+
+/* Zweiter Button (nach 0.3s) */
+button:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+/* Dritter Button (nach 0.6s) */
+button:nth-child(3) {
+    animation-delay: 0.6s;
 }
 
 @keyframes slide-in {
