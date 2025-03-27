@@ -16,9 +16,10 @@ button {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
-    animation: slide-in 0.8 ease-out;
+    animation: slide-in 0.8s ease-out;
 }
 
 @keyframes slide-in {
-    from { transform: translateX(-100px); transform: translateY(-100px); opacity: 0; }
-    to { transform: translateX(0); transform: translateY(0); opacity: 1; }
+    from { transform: translate(-100px, -100px); opacity: 0; }
+    to { transform: translate(0, 0); opacity: 1; }
+}
