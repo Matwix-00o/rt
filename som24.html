@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommer 2024</title>
+    <link rel="icon" type="image/jpg" href="logosonn.jpg"> 
+    <style>
+       
+
+       #backz {
+
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.0);
+            padding: 10px;
+            border: none;
+        }
+
+
+
+
+
+       #download {
+
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.0);
+            padding: 10px;
+            border: none;
+        }
+        body {
+            background-color: black;
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        /* Galerie mit 4 Bildern pro Spalte */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        /* Styling der Bilder */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Stil für das vergrößerte Bild */
+        .modal {
+            display: none; /* Anfangs ausgeblendet */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        /* Der Close-Button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.0);
+            border: none;
+        }
+
+        /* Weiter- und Zurück-Buttons */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.0);
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(250, 0, 0, 0.6);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Sommer 2024</h2>
+<button onclick="backz()" id="backz">Zurück</button>
+
+<!-- Galerie -->
+<div class="gallery">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.38_00929346.jpg" alt="Bild 1">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.38_3c776a3a.jpg" alt="Bild 2">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.38_4a8f27af.jpg" alt="Bild 3">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.38_91c8b34c.jpg" alt="Bild 4">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.38_e7215dcd.jpg" alt="Bild 5">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.39_0fc1bbd1.jpg" alt="Bild 6">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.39_301b5d83.jpg" alt="Bild 7">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.39_d79168b0.jpg" alt="Bild 8">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.39_e58594b6.jpg" alt="Bild 9">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.39_e6e11a21.jpg" alt="Bild 10">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.40_142447b6.jpg" alt="Bild 11">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.40_ce847f44.jpg" alt="Bild 12">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.40_e0708a62.jpg" alt="Bild 13">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.41_2ed26f04.jpg" alt="Bild 14">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.41_415fbb67.jpg" alt="Bild 15">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.41_9921086a.jpg" alt="Bild 16">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.41_fa45f1c3.jpg" alt="Bild 17">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.42_ad88a49b.jpg" alt="Bild 18">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.43_48ca74b7.jpg" alt="Bild 19">
+    <img src="WhatsApp Bild 2025-03-22 um 15.12.43_e5731c77.jpg" alt="Bild 20">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.02_3e081991.jpg" alt="Bild 21">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.02_459047ba.jpg" alt="Bild 22">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.03_10fbbb6e.jpg" alt="Bild 23">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.03_1b553561.jpg" alt="Bild 24">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.03_3429f5b5.jpg" alt="Bild 25">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.03_5355b5e8.jpg" alt="Bild 26">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.03_9d931471.jpg" alt="Bild 27">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.03_b5188497.jpg" alt="Bild 28">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.04_02a06049.jpg" alt="Bild 29">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.04_14d15267.jpg" alt="Bild 30">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.04_8ed90d00.jpg" alt="Bild 31">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.04_96c0ff15.jpg" alt="Bild 32">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.04_ea5405e1.jpg" alt="Bild 33">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.05_017ff773.jpg" alt="Bild 34">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.05_10e0ed30.jpg" alt="Bild 35">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.05_1256ebdc.jpg" alt="Bild 36">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.05_2ceabd05.jpg" alt="Bild 37">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.05_d3f53d1e.jpg" alt="Bild 38">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.06_49bc759a.jpg" alt="Bild 39">
+    <img src="WhatsApp Bild 2025-03-22 um 15.13.06_ba68e9eb.jpg" alt="Bild 40">
+    <!-- Füge mehr Bilder hinzu -->
+</div>
+
+
+
+<!-- Modal für das vergrößerte Bild -->
+<div id="myModal" class="modal">
+    <!-- Container für Close- und Download-Button -->
+    <div class="modal-header">
+        <button class="close">&times;</button>
+        <button id="download">&darr;</button>
+    </div>
+    <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
+    <img id="modalImg" src="" alt="">
+    <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+
+<script>
+    // Alle Bilder abrufen
+    const images = document.querySelectorAll('.gallery img');
+    const modal = document.getElementById('myModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.close');
+    let currentIndex = 0;
+
+    // Event Listener für jedes Bild
+    images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            modal.style.display = 'flex'; // Modal anzeigen
+            modalImg.src = image.src;    // Das Bild in der großen Ansicht setzen
+            currentIndex = index;        // Der aktuelle Index des Bildes
+        });
+    });
+
+    // Event Listener zum Schließen des Modals
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none'; // Modal schließen
+    });
+
+    // Event Listener, um das Modal zu schließen, wenn man außerhalb des Bildes klickt
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Funktion zum Wechseln der Bilder
+    function changeImage(direction) {
+        currentIndex += direction;
+        
+        // Falls der Index nach vorne oder hinten außerhalb des Bereichs geht, zurück zum Anfang oder Ende
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+
+        // Das neue Bild in das Modal setzen
+        modalImg.src = images[currentIndex].src;
+    }
+
+    // Download-Button abrufen
+    const downloadBtn = document.getElementById('download');
+    
+    // Funktion zum Aktualisieren des Download-Links
+    function updateDownloadLink() {
+        downloadBtn.onclick = function() {
+            const link = document.createElement('a');
+            link.href = modalImg.src;
+            link.download = 'bild.jpg'; // Standardname für das heruntergeladene Bild
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    }
+    
+    // Event Listener für jedes Bild, um den Download-Link zu setzen
+    images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            modalImg.src = image.src;
+            currentIndex = index;
+            updateDownloadLink(); // Download-Link beim Bildwechsel aktualisieren
+        });
+    });
+    
+    // Update des Download-Links, wenn man zwischen Bildern wechselt
+    function changeImage(direction) {
+        currentIndex += direction;
+    
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+    
+        modalImg.src = images[currentIndex].src;
+        updateDownloadLink(); // Download-Link aktualisieren
+    }
+    function ladeScript(url) {
+        const script = document.createElement('script'); // Erstelle ein neues <script>-Tag
+        script.src = url;  // Setze die Quelle der JavaScript-Datei
+        script.type = 'text/javascript';  // Setze den Typ des Skripts
+        script.async = true;  // Das Skript wird asynchron geladen
+        document.head.appendChild(script); // Füge das <script>-Tag zum <head>-Tag der Seite hinzu
+    }
+    
+    ladeScript('win24.js');  // Lade und führe 'script1.js' aus
+    
+    
+
+
+</script>
+
+</body>
+</html>
