@@ -31,7 +31,8 @@ function herb24() {
     window.location.href = "herb24.html?key=romtromps!"
 }
 
-function yomulma25() {
-            window.loacation.href = "yomulma25.html?key=romtromps!"
+function herb24() {
+    window.location.href = "yomulma25.html?key=romtromps!"
 }
+
 
