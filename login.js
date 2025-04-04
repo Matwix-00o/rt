@@ -12,7 +12,12 @@ function checkPasswort() {
             }
         }
 
- 
+ document.getElementById("passwortEingabe").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+        checkPasswort();
+    }
+});
 
 // Prüfen, ob der Nutzer bereits eingeloggt ist
 function checkLogin() {
